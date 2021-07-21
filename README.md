@@ -29,7 +29,7 @@ Project is created with:
 * Apollo
 * Material UI
 
-## Install Depndencies
+## Install Dependencies
 
 ### `yarn`
 
