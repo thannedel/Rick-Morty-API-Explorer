@@ -1,6 +1,37 @@
-# Getting Started with Create React App
+# The Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Your task is to build an API explorer for the Rick & Morty API! It should be a simple web app that **lists all entries** for the 3 models (Characters, Episodes, Location), and **has detail views** for each of them showing all their attributes and relationships.
+
+You don’t need to support the creation, editing or deleting of objects, but design your code in a way that will make this easy to add in the future. The mockup below is just rough guidance for one of the view, you can design the UI however you want as long as it’s usable (I’d recommend just using your favourite UI library - don't spend too much time here). The app should:
+
+- Show loading indicators for requests
+- Support pagination
+- Easily allow for future changes to the models (e.g. adding new fields to Authors or a
+new model entirely)
+- Contain tests for key components and functionality
+
+# API
+
+The API uses GraphQL and is hosted here: https://rickandmortyapi.com/graphql. You'll find a playground and documentation there.
+
+# Frontend
+
+Please use React and Apollo to build your client. Everything else is up to you!
+
+![image](https://user-images.githubusercontent.com/57347092/126491532-98abf937-b2ca-4ee4-aaa3-200ab54a2b55.png)
+
+# The Project
+
+## Technologies
+Project is created with:
+* React/Typescript
+* Codegen for Types generation
+* Apollo
+* Material UI
+
+## Install Depndencies
+
+### `yarn`
 
 ## Available Scripts
 
@@ -11,36 +42,17 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `yarn types:graphql`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Generates code from the GraphQL schema and GraphQL operations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
