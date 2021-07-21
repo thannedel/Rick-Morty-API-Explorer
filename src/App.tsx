@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { LocationPage, CharacterPage, EpisodePage } from './Pages';
+import { CharacterTable, EpisodeTable, LocationTable } from './ModelTables';
+import NavBar from './common/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <NavBar />
+        <div className='content'>
+          <Switch>
+            <Route exact path='/'>
+              <h1 className='title'>Characters</h1>
+              <CharacterTable />
+            </Route>
+            <Route path='/episodes'>
+              <h1 className='title'>Episodes</h1>
+              <EpisodeTable />
+            </Route>
+            <Route path='/locations'>
+              <h1 className='title'>Locations</h1>
+              <LocationTable />
+            </Route>
+            <Route path='/character/:id'>
+              <CharacterPage />
+            </Route>
+            <Route path='/episode/:id'>
+              <EpisodePage />
+            </Route>
+            <Route path='/location/:id'>
+              <LocationPage />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
